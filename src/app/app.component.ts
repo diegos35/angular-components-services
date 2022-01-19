@@ -6,6 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
+  //ngFor
+  listNames: Array <string> = [
+    'Diego',
+    'Nicolas',
+    'Santy'
+    ];
+  newName = '';
+
+
   name = 'Diego';
   age = 25;
   img =  'https://source.unsplash.com/random';
@@ -17,7 +27,7 @@ export class AppComponent {
     avatar: 'https://source.unsplash.com/random'
   }
 
-  toggleButton(){
+  toggleButton(){ //esto funciona para un acordeon
     this.btnDisable = !this.btnDisable; //Habilitar - desabilitar
   }
 
@@ -35,4 +45,14 @@ export class AppComponent {
     console.log(element);
     this.person.name = element.value;
   }
+
+  addName(){
+    this.listNames.push(this.newName); //el newName esta en el ngMode([])
+    this.newName = '';
+  }
+
+  deleteName(index: number){
+    this.listNames.splice(index, 1); //method adds and/or removes array elements.
+  }
+
 }
