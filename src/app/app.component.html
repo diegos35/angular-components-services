@@ -1,4 +1,13 @@
-<h1>NgModel [(NgModel)]</h1>
+<h1>*ngIf</h1>
+<input type="text" required [(ngModel)]="person.name">
+<p *ngIf="person.name === 'nicolas'">Soy nicolas</p>
+<p *ngIf="person.name === 'diego' && person.age === 25; else elseBlock">Soy diego</p>
+<ng-template #elseBlock>
+  <p>Bloque de else</p>
+</ng-template>
+
+<!--------------------------------------------------->
+<h1>NgModel [(NgModel)] Data Binding</h1>
 <!-- Es la convinacion de Pproperty binding y Event binding -->
 <p>Name {{person.name}}</p>
 <input type="text" required #nameInput="ngModel" [(ngModel)]="person.name" >
