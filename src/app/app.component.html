@@ -1,4 +1,12 @@
+<h1>*ngFor Objects</h1>
+<div *ngFor= "let product of products">
+  <img [src]="product.image" alt="image" width="250">
+  <h2>{{product.price}}</h2>
+  <p>{{product.name}}</p>
 
+</div>
+<hr>
+<!---------------------------------------------------->
 <h1>*ngFor</h1>
 <input type="text" required [(ngModel)]="newName">
 <button (click)="addName()">Add name</button>
@@ -9,10 +17,8 @@
     <button (click)="deleteName(i)">Delete</button>
   </li>
 </ul>
-
-
-
-
+<hr>
+<!--------------------------------------------------->
 <h1>*ngIf</h1>
 <input type="text" required [(ngModel)]="person.name">
 <p *ngIf="person.name === 'nicolas'">Soy nicolas</p>
@@ -20,16 +26,16 @@
 <ng-template #elseBlock>
   <p>Bloque de else</p>
 </ng-template>
-
+<hr>
 <!--------------------------------------------------->
 <h1>NgModel [(NgModel)] Data Binding</h1>
 <!-- Es la convinacion de Pproperty binding y Event binding -->
 <p>Name {{person.name}}</p>
-<input type="text" required #nameInput="ngModel" [(ngModel)]="person.name" >
+<input type="text" required #nameInput="ngModel" [(ngModel)]="person.name">
 <p> Valid name: {{nameInput.valid}}</p> <!-- el estado cambia de forma reactiva en nuestro html -->
 <br>
 <p> Age: {{person.age}}</p>
-<input type="number" max="18" min="10" required #ageInput="ngModel" [(ngModel)]="person.age" >
+<input type="number" max="18" min="10" required #ageInput="ngModel" [(ngModel)]="person.age">
 <p> Valid Age: {{ageInput.valid}}</p>
 <hr>
 <br>
@@ -41,17 +47,19 @@
 <p>Edad {{person.age}}</p>
 <button (click)="increaseAge()">Age ++</button>
 
-<div class="box" (scroll)="onScroll($event)" > <!-- eventos nativos o del DOM $event -->
-  <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore repudiandae vitae consequuntur aliquam tempora illo necessitatibus! Est iste labore rem cumque officiis provident, et, odit, atque saepe repudiandae pariatur sint?  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas hic est error iure placeat, harum voluptatem dolore suscipit minus tenetur porro corrupti corporis autem. Eius sequi iure voluptate quia sapiente!</p>
+<div class="box" (scroll)="onScroll($event)">
+  <!-- eventos nativos o del DOM $event -->
+  <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore repudiandae vitae consequuntur aliquam tempora
+    illo necessitatibus! Est iste labore rem cumque officiis provident, et, odit, atque saepe repudiandae pariatur sint?
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas hic est error iure placeat, harum voluptatem
+    dolore suscipit minus tenetur porro corrupti corporis autem. Eius sequi iure voluptate quia sapiente!</p>
 </div>
-<hr/>
-
+<hr />
 <input type="text" [value]="person.name" (keyup)="changeName($event)">
 <p>Name {{person.name}}</p>
 <hr>
 <br>
 <!---------------------------------------------->
-
 <h1>Property Binding [name] para propiedades</h1>
 <button [disabled]="btnDisable"> Enviar</button>
 <input type="text" [value]="person.name">
