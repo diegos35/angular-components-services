@@ -23,11 +23,12 @@
 </p> -->
 <!------------------------------------------------>
 <h1>*ngFor Objects</h1>
-<div *ngFor= "let product of products">
-  <img [src]="product.image" alt="image" width="250">
-  <h2>{{product.price}}</h2>
-  <p>{{product.name}}</p>
-
+<div class="products--grid">
+  <div *ngFor= "let product of products">
+    <img [src]="product.image" alt="image">
+    <h2>{{product.price}}</h2>
+    <p>{{product.name}}</p>
+  </div>
 </div>
 <hr>
 <!---------------------------------------------------->
@@ -97,4 +98,4 @@
 <p>3 +3 = {{ 3 +3}} </p>
 <h3> Hola soy, {{ person.name }} y tengo {{ person.age }}</h3>
 
-<img src="{{ img }}" alt="imagen">
+<img width="200" src="{{ img }}" alt="imagen">
