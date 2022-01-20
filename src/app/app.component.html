@@ -1,3 +1,34 @@
+<h1>NgClass & NgStyle</h1>
+<!-- La NgClass directiva te permite configurar la clase CSS de forma dinámica para un elemento DOM . -->
+<input type="text" required #nameInput4="ngModel" [(ngModel)]="person.name">
+<hr class="line-error"
+[ngClass]="{
+  'valid': nameInput4.valid,
+  'invalid': nameInput4.invalid
+}"
+/>
+<p class="message-error" [class.invalid]="nameInput4.invalid">El campo es requerido</p>
+<h2>ngStyle</h2>
+<div class="styles">
+  <div>
+    <input type="number" [(ngModel)]="box.width">
+    <input type="number" [(ngModel)]="box.height">
+    <input type="color" [(ngModel)]="box.background">
+  </div>
+  <div>
+    <div [ngStyle]="{
+      'width.px': box.width,
+      'height.px': box.height,
+      'backgroung-color': box.background,
+      'display': 'block'
+    }">
+
+    </div>
+  </div>
+</div>
+
+<hr>
+
 <h1>Class & Style</h1>
 <!-- clases y estilos de formas dinamicas -->
 <input type="text" required #nameInput2="ngModel" [(ngModel)]="person.name">

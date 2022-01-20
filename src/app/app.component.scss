@@ -28,6 +28,16 @@
     opacity: 1  ;
   }
 }
+.line-error{
+  height: 0;
+  border-bottom: 1px solid;
+  &.invalid{
+    border-color: red;
+  }
+  &.valid{
+    border-color: green;
+  }
+}
 
 .styles{
   display: grid;
