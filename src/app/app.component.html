@@ -1,3 +1,24 @@
+<h1>Formulario</h1>
+<form (ngSubmit)="onRegister()" #myForm="ngForm">
+  <div class="input.group">
+    <label for="">Name</label>
+    <input type="text" required name="name" id="name" [(ngModel)]="register.name">
+    <p>Mensajes de error</p>
+  </div>
+  <div class="input.group">
+    <label for="">Email</label>
+    <input type="email" required name="email" id="email" [(ngModel)]="register.email">
+    <p>Mensajes de error</p>
+  </div>
+  <div class="input.group">
+    <label for="">Password</label>
+    <input type="password" required name="password" id="Password" [(ngModel)]="register.password">
+    <p>Mensajes de error</p>
+  </div>
+  <button [disabled]="myForm.invalid " type="submit">Registrar</button>
+  <button type="button">Acción</button>
+</form>
+<hr>
 <h1>NgClass & NgStyle</h1>
 <!-- La NgClass directiva te permite configurar la clase CSS de forma dinámica para un elemento DOM . -->
 <input type="text" required #nameInput4="ngModel" [(ngModel)]="person.name">

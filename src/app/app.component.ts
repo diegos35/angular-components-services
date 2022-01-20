@@ -61,6 +61,12 @@ export class AppComponent {
   img =  'https://source.unsplash.com/random';
   btnDisable = true;
 
+  register = {
+    name: '',
+    email: '',
+    password: ''
+  }
+
   person = {
     name: 'Diego',
     age: 25,
@@ -95,4 +101,7 @@ export class AppComponent {
     this.listNames.splice(index, 1); //method adds and/or removes array elements.
   }
 
+  onRegister(){
+    console.log(this.register)
+  }
 }
