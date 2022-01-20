@@ -18,10 +18,35 @@
      }
    }
 }
-@media screen and(min-width:40em){
+
+.message-error{
+  background: red;
+  color: white;
+  opacity: 0; //no se va a ver
+  transition: all linear .5s;//tiempo en el carga el mensaje
+  &.invalid{
+    opacity: 1  ;
+  }
+}
+
+.styles{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);//farccion
+}
+
+//Tablets
+@media screen and (min-width: 40em) {
   .products--grid{
     display: grid;
-   grid-template-columns: repeat(5, 1fr);
-   grid-gap: 15px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
+  }
+//Desktop
+  @media screen and (min-width: 62em) {
+    .products--grid{
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-gap: 15px;
+      }
   }
 }

@@ -8,6 +8,7 @@ import { Product } from './product.model';
 })
 export class AppComponent {
 
+  widthImg = 10;
   products:Product[] = [
     {
       name: 'EL mejor juguete',
