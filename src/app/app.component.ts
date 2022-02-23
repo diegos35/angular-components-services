@@ -7,6 +7,10 @@ import { Product } from './product.model';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  imgParent = 'https://source.unsplash.com/random'
+  imgParent = '';
+  
+  onLoadedParent(img: string){//crear listen para escuchar el emiter
+    console.log('log parent', img); 
+  }
   
 }
