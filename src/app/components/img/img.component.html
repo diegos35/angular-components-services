@@ -1,1 +1,7 @@
-<p>img works!</p>
+<!--  <p>img works!</p>
+<h1> {{img}} </h1>
+ -->
+<img [src]="img" width="200" *ngIf="img; else elseImg">
+<ng-template #elseImg>
+    <img src="./assets/images/album.jpg" alt="">
+</ng-template>
