@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { PropertyBindingComponent } from './property-binding/property-binding.component';
 
 
-import { FormsModule } from '@angular/forms'; //para utilizar el [(ngMOdel)]
+import { FormsModule } from '@angular/forms';
+import { ImgComponent } from './components/img/img.component'; //para utilizar el [(ngMOdel)]
 @NgModule({
   declarations: [
     AppComponent,
-    PropertyBindingComponent
+    PropertyBindingComponent,
+    ImgComponent
   ],
   imports: [
     BrowserModule,
