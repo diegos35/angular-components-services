@@ -7,6 +7,9 @@ import { Product } from './product.model';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
+  showImage = true;
+
   products:Product[] = [
     { 
       id: '1',
@@ -52,4 +55,8 @@ export class AppComponent {
     console.log('log parent', img); 
   }
   
+  toggleImg(){
+    this.showImage = !this.showImage;
+  }
+
 }
