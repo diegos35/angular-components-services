@@ -11,7 +11,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { ImgComponent } from './components/img/img.component';
 import { ProductComponent } from './components/product/product.component';
 import { ProductsComponent } from './components/products/products.component';
-import { NavComponent } from './components/nav/nav.component'; //para utilizar el [(ngMOdel)]
+import { NavComponent } from './components/nav/nav.component';
+import { ReversePipe } from './pipes/reverse.pipe';
+import { TimeAgoPipe } from './pipes/time-ago.pipe'; //para utilizar el [(ngMOdel)]
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +21,9 @@ import { NavComponent } from './components/nav/nav.component'; //para utilizar e
     ImgComponent,
     ProductComponent,
     ProductsComponent,
-    NavComponent
+    NavComponent,
+    ReversePipe,
+    TimeAgoPipe
   ],
   imports: [
     BrowserModule,
