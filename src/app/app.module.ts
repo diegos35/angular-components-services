@@ -13,7 +13,8 @@ import { ProductComponent } from './components/product/product.component';
 import { ProductsComponent } from './components/products/products.component';
 import { NavComponent } from './components/nav/nav.component';
 import { ReversePipe } from './pipes/reverse.pipe';
-import { TimeAgoPipe } from './pipes/time-ago.pipe'; //para utilizar el [(ngMOdel)]
+import { TimeAgoPipe } from './pipes/time-ago.pipe';
+import { HighLightDirective } from './directives/high-light.directive'; //para utilizar el [(ngMOdel)]
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +24,8 @@ import { TimeAgoPipe } from './pipes/time-ago.pipe'; //para utilizar el [(ngMOde
     ProductsComponent,
     NavComponent,
     ReversePipe,
-    TimeAgoPipe
+    TimeAgoPipe,
+    HighLightDirective
   ],
   imports: [
     BrowserModule,
