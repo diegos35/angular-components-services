@@ -16,6 +16,8 @@ instancias solo guarda en memoria la instacia que fue creada y devuelve la refer
   total = 0;
   myShoppingCart: Product[] = [];
   products: Product[] = [];
+  today = new Date();
+  date = new Date(2021, 1, 21) //https://angular.io/api/common/DatePipe
 
   constructor(
     private storeService: StoreService, //inyección de dependencias
