@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/product.model';
 
 //import { Product } from "../";
-
+import { StoreService} from '../../services/store.service'
 
 @Component({
   selector: 'app-products',
@@ -12,8 +12,9 @@ import { Product } from 'src/app/product.model';
 export class ProductsComponent implements OnInit {
 
 
-  myShopingCart: Product [] = [];
+  
   total = 0 ;
+  myShoppingCart: Product[] = [];
 
   products:Product[] = [
     { 
@@ -55,16 +56,18 @@ export class ProductsComponent implements OnInit {
     }
   ];
 
-  constructor() { }
+  constructor(
+    private storeService: StoreService //inyección de dependencias
+  ) 
+  {
+    this.myShoppingCart = this.storeService.getShoppingCart(); //porque esto no es async
+  }
 
   ngOnInit(): void {
   }
 
   onAddToShopingCart(product: Product){
-    this.myShopingCart.push(product);
-    this.total = this.myShopingCart.reduce((sum ,item) => 
-      sum + item.price , 0
-    )
-    console.log(product, this.myShopingCart);
+    this.storeService.addProduct(product);
+    this.total = this.storeService.getTotal();
   }
 }
