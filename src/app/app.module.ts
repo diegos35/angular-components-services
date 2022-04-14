@@ -7,6 +7,7 @@ import { PropertyBindingComponent } from './property-binding/property-binding.co
 
 
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { ImgComponent } from './components/img/img.component';
 import { ProductComponent } from './components/product/product.component';
 import { ProductsComponent } from './components/products/products.component';
@@ -23,7 +24,8 @@ import { NavComponent } from './components/nav/nav.component'; //para utilizar e
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule //importarlo
+    FormsModule, //importarlo
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
