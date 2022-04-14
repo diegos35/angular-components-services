@@ -9,14 +9,16 @@ import { PropertyBindingComponent } from './property-binding/property-binding.co
 import { FormsModule } from '@angular/forms';
 import { ImgComponent } from './components/img/img.component';
 import { ProductComponent } from './components/product/product.component';
-import { ProductsComponent } from './components/products/products.component'; //para utilizar el [(ngMOdel)]
+import { ProductsComponent } from './components/products/products.component';
+import { NavComponent } from './components/nav/nav.component'; //para utilizar el [(ngMOdel)]
 @NgModule({
   declarations: [
     AppComponent,
     PropertyBindingComponent,
     ImgComponent,
     ProductComponent,
-    ProductsComponent
+    ProductsComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,

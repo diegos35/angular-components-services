@@ -9,7 +9,8 @@ export class ImgComponent implements OnInit, OnChanges, AfterViewInit, OnDestroy
 
   img: string = '';
 
-  //Podemos utilizar este método para convertir en observable a un input, de esa manera al momento de un cambio, podemos decidir que hacer con el y aplicar código de ser necesario
+  //Podemos utilizar este método para convertir en observable a un input, de esa manera 
+  //al momento de un cambio, podemos decidir que hacer con el y aplicar código de ser necesario
   @Input('img') 
   set changeImage(newImg: string){
     this.img = newImg;
