@@ -11,7 +11,8 @@ import { StoreService} from '../../services/store.service'
 })
 export class ProductsComponent implements OnInit {
 
-
+/* Patern Singleton: instacia de servicio, no crea varias 
+instancias solo guarda en memoria la instacia que fue creada y devuelve la referencia */
   
   total = 0 ;
   myShoppingCart: Product[] = [];
