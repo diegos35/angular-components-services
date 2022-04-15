@@ -11,6 +11,7 @@ export class ImgComponent implements OnInit, OnChanges, AfterViewInit, OnDestroy
 
   //Podemos utilizar este método para convertir en observable a un input, de esa manera 
   //al momento de un cambio, podemos decidir que hacer con el y aplicar código de ser necesario
+  // eslint-disable-next-line @angular-eslint/no-input-rename
   @Input('img') 
   set changeImage(newImg: string){
     this.img = newImg;

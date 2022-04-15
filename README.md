@@ -1,5 +1,6 @@
 sin file spec:ng g c componentes/img --skip-tests -is
 
+ng lint para mirar reglas de codigo angular
 
 # MyStore
 

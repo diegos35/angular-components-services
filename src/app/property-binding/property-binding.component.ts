@@ -5,11 +5,8 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './property-binding.component.html',
   styleUrls: ['./property-binding.component.scss']
 })
-export class PropertyBindingComponent implements OnInit {
+export class PropertyBindingComponent {
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }
