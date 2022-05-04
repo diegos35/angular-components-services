@@ -11,7 +11,7 @@ export class StoreService {
   /* Estado compartido */
   private myCart = new BehaviorSubject<Product[]>([]);//array de produts state initial vacio ([])
   //Observable
-  myCart$ = this.myCart.asObservable(); 
+  myCart$ = this.myCart.asObservable();//listening changes
 
   constructor() { }
 
